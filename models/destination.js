@@ -6,7 +6,11 @@ const DestinationSchema = new Schema({
     image: String,
     price: Number,
     description: String,
-    location: String
+    location: String,
+    author: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }
 });
 
 module.exports = mongoose.model('Destination', DestinationSchema);
