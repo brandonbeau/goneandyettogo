@@ -28,9 +28,19 @@ const seedDB = async () => {
             author: '6074c1392779eb1df8764fe3',
             location: `${cities[random1000].city}, ${cities[random1000].state}`,
             title: `${sample(descriptors)} ${sample(places)}`,
-            image: 'https://source.unsplash.com/collection/483251',
             description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, doloribus labore incidunt voluptates pariatur odio porro voluptatem autem odit mollitia iure quisquam magnam eligendi! Veniam numquam debitis totam necessitatibus doloremque!',
-            price
+            price, 
+            images: [
+                {
+                  url: 'https://res.cloudinary.com/dspicgd49/image/upload/v1619285455/gonengo/byziqmrrkjw40haota5v.jpg',
+                  filename: 'gonengo/byziqmrrkjw40haota5v'
+                },
+                {
+
+                  url: 'https://res.cloudinary.com/dspicgd49/image/upload/v1619285455/gonengo/rbr2s2ckbba6nas82efw.jpg',
+                  filename: 'gonengo/rbr2s2ckbba6nas82efw'
+                }
+              ]
         })
         await dest.save();
     }

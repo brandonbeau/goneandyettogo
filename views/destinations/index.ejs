@@ -7,7 +7,11 @@
         <div class="card" mb-3>
             <div class="row">
                 <div class="col-md-4">
-                    <img class="img-fluid" alt="" src="<%=destination.image%>">
+                    <% if(destination.images.length) {%> 
+                    <img class="img-fluid" alt="" src="<%=destination.images[0].url%>">
+                    <% }else{ %> 
+                    <img class="img-fluid" alt="" src="https://res.cloudinary.com/dspicgd49/image/upload/v1619322805/gonengo/c6tem9wporgprrwljuat.jpg">
+                    <% } %> 
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
